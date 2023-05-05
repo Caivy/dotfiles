@@ -146,7 +146,7 @@ printf "Copying files to respective directories..\n"
 [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts
 [ ! -d ~/.local/share/asciiart ] && mkdir -p ~/.local/share/asciiart
 
-for archivos in ~/dotfiles/config/*; do
+for archivos in ~/dotfiles/.config/*; do
   cp -R "${archivos}" ~/.config/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s folder copied succesfully!%s\n" "${BLD}" "${CGR}" "${archivos}" "${CNC}"
@@ -157,7 +157,7 @@ for archivos in ~/dotfiles/config/*; do
   fi
 done
 
-for archivos in ~/dotfiles/misc/bin/*; do
+for archivos in ~/dotfiles/.config/misc/bin/*; do
   cp -R "${archivos}" ~/.local/bin/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s file copied succesfully!%s\n" "${BLD}" "${CGR}" "${archivos}" "${CNC}"
@@ -168,7 +168,7 @@ for archivos in ~/dotfiles/misc/bin/*; do
   fi
 done
 
-for archivos in ~/dotfiles/misc/applications/*; do
+for archivos in ~/dotfiles/.config/misc/applications/*; do
   cp -R "${archivos}" ~/.local/share/applications/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s file copied succesfully!%s\n" "${BLD}" "${CGR}" "${archivos}" "${CNC}"
@@ -179,7 +179,7 @@ for archivos in ~/dotfiles/misc/applications/*; do
   fi
 done
 
-for archivos in ~/dotfiles/misc/fonts/*; do
+for archivos in ~/dotfiles/.config/misc/fonts/*; do
   cp -R "${archivos}" ~/.local/share/fonts/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s copied succesfully!%s\n" "${BLD}" "${CGR}" "${archivos}" "${CNC}"
@@ -190,7 +190,7 @@ for archivos in ~/dotfiles/misc/fonts/*; do
   fi
 done
 
-for archivos in ~/dotfiles/misc/asciiart/*; do
+for archivos in ~/dotfiles/.config/misc/asciiart/*; do
   cp -R "${archivos}" ~/.local/share/asciiart/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s file copied succesfully!%s\n" "${BLD}" "${CGR}" "${archivos}" "${CNC}"
@@ -201,7 +201,7 @@ for archivos in ~/dotfiles/misc/asciiart/*; do
   fi
 done
 
-for archivos in ~/dotfiles/misc/firefox/*; do
+for archivos in ~/dotfiles/.config/misc/firefox/*; do
   cp -R "${archivos}" ~/.mozilla/firefox/*.default-release/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s folder copied succesfully!%s\n" "${BLD}" "${CGR}" "${archivos}" "${CNC}"
@@ -212,7 +212,7 @@ for archivos in ~/dotfiles/misc/firefox/*; do
   fi
 done
 
-cp -f "$HOME"/dotfiles/home/.zshrc "$HOME"
+cp -f "$HOME"/dotfiles/.zshrc "$HOME"
 fc-cache -rv >/dev/null 2>&1
 printf "%s%sFiles copied succesfully!!%s\n" "${BLD}" "${CGR}" "${CNC}"
 sleep 3

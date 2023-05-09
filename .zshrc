@@ -5,7 +5,7 @@
 #  ┬  ┬┌─┐┬─┐┌─┐
 #  └┐┌┘├─┤├┬┘└─┐
 #   └┘ ┴ ┴┴└─└─┘
-export VISUAL='geany'
+export VISUAL='code'
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='brave'
@@ -105,7 +105,7 @@ fi
 #  ┌─┐┬  ┬┌─┐┌─┐
 #  ├─┤│  │├─┤└─┐
 #  ┴ ┴┴─┘┴┴ ┴└─┘
-alias mirrors="sudo reflector --verbose --latest 5 --country 'United States' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --verbose --latest 5 --country 'Hong Kong' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
 
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mantenimiento="yay -Sc && sudo pacman -Scc"
@@ -120,6 +120,30 @@ alias musica="ncmpcpp"
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# git
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias tag='git tag'
+alias newtag='git tag -a'
+
+# get error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+alias ani="ani-cli"
 #  ┌─┐┬ ┬┌┬┐┌─┐  ┌─┐┌┬┐┌─┐┬─┐┌┬┐
 #  ├─┤│ │ │ │ │  └─┐ │ ├─┤├┬┘ │ 
 #  ┴ ┴└─┘ ┴ └─┘  └─┘ ┴ ┴ ┴┴└─ ┴ 

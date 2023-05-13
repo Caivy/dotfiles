@@ -21,7 +21,7 @@ case "$class" in
 		;;
 	Ranger)
 		eval "$consequences"
-		[ "$state" ] || echo "state=floating rectangle=811x286+0+0 center=on"
+		[ "$state" ] || echo "state=tiled center=on"
 		;;
 	MusicPlayer)
 		eval "$consequences"
@@ -35,7 +35,7 @@ case "$class" in
 	    eval "$consequences"
 		[ "$state" ] || echo "state=floating focus=on center=on rectangle=849x477+0+0"
 		;;
-	Viewnior)
+	Vhiewnior)
 	    eval "$consequences"
 	    [ "$state" ] || echo "state=floating focus=on center=on"
 		;;
